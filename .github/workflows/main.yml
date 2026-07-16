@@ -14,13 +14,14 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: afoxxvi/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Options
           user: afoxxvi
           template: repository
+          repo: metrics
           base: header, activity, community, repositories, metadata
           config_timezone: Etc/GMT-8
           plugin_followup: yes
